@@ -1,0 +1,160 @@
+<script>
+
+	//----------------------- Question 1 -----------------------\\
+	console.log("*********************** Question 1 ***********************");
+	var arr = [0, 1, 2, 3, 4, 5];
+	var index = 2;
+	
+	console.log("arr: " + arr);
+	/* In the console, we will see the values at the specified indexes */ 
+	console.log("arr[1]: " + arr[1]);					
+	console.log("arr[index = 2]: " + arr[index]);			
+	
+	// In the console, we will see undefined for these subscriptings
+	console.log("arr[string]: " + arr["a"]);			
+	console.log("arr[true]: " + arr[true]);				
+	console.log("arr[char]: " + arr['a']);				
+	console.log("**********************************************************");
+	//----------------------------------------------------------\\
+	
+	
+	
+	//----------------------- Question 2 -----------------------\\
+	console.log("*********************** Question 2 ***********************");
+	var rangeArr = [0, 1, 2, 3, 4, 5];
+	console.log("rangeArr: " + rangeArr);
+	
+	/* In the console, we will see undefined. Therefore, javascript does not check range */
+	console.log("rangeArr[rangeArr.length + 1]: " + rangeArr[rangeArr.length + 1]);	
+	console.log("rangeArr[-1]: " + rangeArr[-1]);						
+	console.log("**********************************************************");
+	//----------------------------------------------------------\\
+	
+	
+	//----------------------- Question 3 -----------------------\\
+	console.log("*********************** Question 3 ***********************");
+	var arr2 = [0, 1, 2, 3, 4];
+	console.log("arr2: " + arr2);
+	
+	arr2.push(5);
+	arr2.push(6);
+	
+	console.log("arr2: " + arr2);
+	console.log("**********************************************************");
+	//----------------------------------------------------------\\
+	
+	//----------------------- Question 4 -----------------------\\
+	console.log("*********************** Question 4 ***********************");
+	//console.log(allocationArr[1]); The code will work until this line.
+	
+	var allocationArr = [0, 1, 2, 3, 4, 5];
+	console.log("allocationArr: " + allocationArr);
+	
+	console.log("allocationArr[3]: " + allocationArr[3]);
+	console.log("**********************************************************");
+	//----------------------------------------------------------\\
+	
+	//----------------------- Question 5 -----------------------\\
+	console.log("*********************** Question 5 ***********************");
+	// Ragged Array initialization
+	var raggedArr = [1, [2, 3], [4, 5, 6] , [7, 8], 9];
+	
+	// Print whole array
+	console.log("Ragged Array: " + raggedArr);
+	
+	// Get some values from array
+	console.log("raggedArr[2][1]: " + raggedArr[2][1]);				
+	console.log("raggedArr[1][2]: " + raggedArr[1][1]);				
+	
+	// Rectangular Array initialization
+	var rectangularArr = [[1, 2], [3, 4], [5, 6]];
+	
+	// Print whole array
+	console.log("Rectangular Array: " + rectangularArr);
+	
+	// Get some values from array
+	console.log("rectangularArr[1][1]: " + rectangularArr[1][1]);			
+	console.log("rectangularArr[0][1]: " + rectangularArr[0][1]);		
+	console.log("**********************************************************");	
+	//----------------------------------------------------------\\
+	
+	//----------------------- Question 7 -----------------------\\
+	console.log("*********************** Question 7 ***********************");
+	var sliceArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+	
+	console.log("Slice Array: " + sliceArr);
+	
+	var slicedArr1 = sliceArr.slice();
+	console.log("Sliced Array 1: Slice Array is sliced without a starting point: " + slicedArr1);
+	
+	var slicedArr2 = sliceArr.slice(-3);
+	console.log("Sliced Array 2: Slice Array is sliced from -3: " + slicedArr2);
+	
+	var slicedArr3 = sliceArr.slice(2, 5);
+	console.log("Sliced Array 3: Slice Array is sliced from 2 to 5: " + slicedArr3);
+	
+	console.log("Slice Array: " + sliceArr);
+	console.log("**********************************************************");
+	//----------------------------------------------------------\\
+	
+	//----------------------- Question 8 -----------------------\\
+	console.log("*********************** Question 8 ***********************");
+	var operationArr1 = [0, 1, 2, 3, 4];
+	var operationArr2 = [1001, 6, 7, 8, 9];
+	var operationArr3 = [0, 1, 2, 3, 4]; 
+	var operationArr4 = operationArr1;
+	var operationArr5 = [21, 0, 0, 0, 0];
+	
+	console.log("operationArr1: " + operationArr1);
+	
+	console.log("operationArr2: " + operationArr2);
+	
+	console.log("operationArr3: " + operationArr3);
+	
+	console.log("operationArr4: " + operationArr4);
+	
+	console.log("operationArr5: " + operationArr5);
+	
+	var addedArr = operationArr1 + operationArr2;
+	var substractArr = operationArr1 - operationArr2;
+	var dividedArr = operationArr1 / operationArr2;
+	var multipliedArr = operationArr1 * operationArr2;
+	
+	console.log("addedArr: " + addedArr);
+	console.log("Type of addedArr: " + typeof(addedArr));
+	console.log("-----------------------------------------------------------");
+	
+	console.log("substractArr: " + substractArr);
+	console.log("Type of substractArr: " + typeof(substractArr));
+	console.log("-----------------------------------------------------------");
+	
+	console.log("dividedArr: " + dividedArr);
+	console.log("Type of dividedArr: " + typeof(dividedArr));
+	console.log("-----------------------------------------------------------");
+	
+	console.log("multipliedArr: " + multipliedArr);
+	console.log("Type of multipliedArr: " + typeof(multipliedArr));
+	console.log("-----------------------------------------------------------");
+	
+	console.log("operationArr1 === operationArr3: " + (operationArr1 === operationArr3));
+	console.log("-----------------------------------------------------------");
+	
+	console.log("operationArr1 !== operationArr4: " + (operationArr1 !== operationArr4));
+	console.log("-----------------------------------------------------------");
+	
+	console.log("operationArr1 < operationArr5: " + (operationArr1 < operationArr5));
+	console.log("-----------------------------------------------------------");
+	
+	console.log("operationArr5 > operationArr2: " + (operationArr5 > operationArr2));
+	console.log("-----------------------------------------------------------");
+	
+	console.log("operationArr5 >= operationArr2: " + (operationArr5 >= operationArr2));
+	console.log("-----------------------------------------------------------");
+	
+	console.log("operationArr1 < operationArr3: " + (operationArr1 <= operationArr3));
+	console.log("-----------------------------------------------------------");
+	console.log("**********************************************************");
+	//----------------------------------------------------------\\
+	
+	
+</script>
