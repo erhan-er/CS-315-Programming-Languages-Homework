@@ -1,0 +1,110 @@
+<script>
+	console.log( "********** Question 1 **********");
+	var object1;
+	var object2 = {lecture: "cs315"};
+	var boolean1 = Boolean( "abc");
+	var boolean2 = !!( "");
+	var boolean3 = Boolean(3);
+	var boolean4 = Boolean(-1);
+	var boolean5 = Boolean(0);
+	var boolean6 = !!(-0);
+	var boolean7 = !!(undefined);
+	var boolean8 = Boolean(null);
+	var boolean9 = !!([]);
+	var boolean10 = !!([1, 2, 3]);
+	var boolean11 = !!(object1);
+	var boolean12 = !!(object2);
+	var boolean13 = true;
+	var boolean14 = false;
+	
+	console.log( boolean1 + " " + boolean2 + " " 
+				+ boolean3 + " " + boolean4 + " " 
+				+ boolean5 + " " + boolean6 + " " 
+				+ boolean7 + " " + boolean8 + " " 
+				+ boolean9 + " " + boolean10 + " "
+				+ boolean11 + " " + boolean12 + " "
+				+ boolean13 + " " + boolean14);
+	
+	console.log( "********************************");
+  
+	console.log( "********** Question 3 **********");
+	function booleanFunction1() {
+		console.log( "booleanFunction1 returns true");
+		return true;
+	}
+	
+	function booleanFunction2() {
+		console.log( "booleanFunction2 returns false");
+		return false;
+	}
+	
+	function booleanFunction3() {
+		console.log( "booleanFunction3 returns undefined");
+		return undefined;
+	}
+	
+	// Calls booleanFunction1 and returns true
+	console.log(true && booleanFunction1());
+	
+	// Does not call booleanFunction1 and returns false
+	console.log(false && booleanFunction1());
+	
+	// Does not call booleanFunction2 and returns true
+	console.log(true || booleanFunction2());
+	
+	// Calls booleanFunction2 and returns false
+	console.log(false || booleanFunction2());
+	
+	/** Does not call booleanFunction3
+	  * Because left hand size already has a return 
+	  * different than null of undefined. */
+	console.log( booleanFunction1() ?? booleanFunction3() );
+	
+	
+	/** Does call booleanFunction1
+	  * Because left hand side has undefined return. */
+	console.log( booleanFunction3() ?? booleanFunction1() );
+	
+	console.log( "********************************");
+	
+	console.log( "********** Question 4 **********");
+	function timer() {
+		var a = 0;
+		for ( let i = 0; i < 1000000; i++ )
+			a += i;
+		return false;
+	}
+	
+	var startTime = performance.now();
+	if ( timer() || timer() || timer() || timer() || timer() || timer() || timer() || timer() || timer() || true ) {
+		console.log( "without short circuit");
+	}
+	
+	var endTime = performance.now();
+	console.log( "Elapsed time: " + (endTime - startTime));
+   
+	var startTime2 = performance.now();
+	if ( true || timer() || timer() || timer() || timer() || timer() || timer() || timer() || timer() || timer() ) {
+		console.log( "with short circuit");
+	}
+	
+	var endTime2 = performance.now();
+	console.log( "Elapsed time: " + (endTime2 - startTime2));
+	console.log( "********************************");
+
+	console.log( "********** Question 5 **********");
+	
+	var value;
+	
+	function helper4() {
+		value = 5; 
+		console.log( "helper4 assigns value to 5 and returns true");
+		return true;
+	}
+	
+	if (true || helper4()) {
+		var a = value * 2;
+		console.log( "a: " + a);
+	}
+	console.log( "********************************");
+</script>
